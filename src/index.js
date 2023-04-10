@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Gameboard from "./Gameboard";
+import Fixed from "./Fixed";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <Fixed />
+    <Gameboard />
   </React.StrictMode>
 );
 
