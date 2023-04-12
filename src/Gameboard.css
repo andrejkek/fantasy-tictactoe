@@ -21,7 +21,7 @@
     height: 100px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: #182834;
+    background-color: white;
     transition-duration: 300ms;
     display: flex;
     align-items: center;
@@ -29,15 +29,15 @@
     font-weight: bolder;
     font-size: 50px;
     cursor: default;
-}
+}  /*#182834  #3e6584*/
 .cell:hover{
-    background-color: #3e6584;
+    background-color: gray;
     transition-duration: 300ms;
 }
 html {
     margin: 0;
     height: 100%;
-    background-image: url("tictactoebg.jpg");
+    background-color: black;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -61,4 +61,10 @@ html {
 .margin{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.test{
+    color: white;
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 35px;
 }
