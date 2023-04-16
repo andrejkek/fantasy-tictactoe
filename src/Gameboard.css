@@ -1,3 +1,9 @@
+*{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-family: "Comic Sans MS";
+}
 .center {
     margin: auto;
     margin-top: 50px;
@@ -34,6 +40,9 @@
     background-color: gray;
     transition-duration: 300ms;
 }
+.cell:active{
+    transform: scale(1.25);
+}
 html {
     margin: 0;
     height: 100%;
@@ -62,9 +71,15 @@ html {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.test{
-    color: white;
-    text-align: center;
+.button{
+    color:white;
     font-family: "Comic Sans MS";
-    font-size: 35px;
+    text-align: center;
+    font-size: 24px;
+    cursor: default;
+    transition-duration: 300ms;
+}
+.button:hover{
+    color:gray;
+    transition-duration: 300ms;
 }

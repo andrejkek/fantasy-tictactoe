@@ -3,7 +3,7 @@ import {useState} from "react";
 let con = 1;
 let won = 0;
 let moves = 0;
-let board = ["", "", "", "", "", "", "", "", ""]
+let board = ["", "", "", "", "", "", "", "", ""];
 const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -126,26 +126,26 @@ function updateMatrix(x) {
     return 1;
 }
 
-function test() {
-    console.log(board);
-}
-
 function checkWin() {
-    console.log("moves=" + moves);
+    //console.log("moves=" + moves);
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
         if (board[a] != "" && board[a] == board[b] && board[a] == board[c]) {
-            console.log(board[a] + " wins!")
+            //console.log(board[a] + " wins!")
             won = board[a];
-            console.log("won is " + won);
+            //console.log("won is " + won);
             return 1;
         } else if (moves == 9) {
             won = "draw";
-            console.log("draw");
+            //console.log("draw");
             return 1;
         }
     }
     return 0;
+}
+
+function handleClick(){
+
 }
 
 function Gameboard() {
@@ -181,7 +181,7 @@ function Gameboard() {
                                         else if (oks == 7) setX8("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -205,7 +205,7 @@ function Gameboard() {
                                         else if (oks == 7) setX8("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -229,7 +229,7 @@ function Gameboard() {
                                         else if (oks == 7) setX8("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -256,7 +256,7 @@ function Gameboard() {
                                         else if (oks == 7) setX8("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -280,7 +280,7 @@ function Gameboard() {
                                         else if (oks == 7) setX8("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -304,7 +304,7 @@ function Gameboard() {
                                         else if (oks == 7) setX8("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -331,7 +331,7 @@ function Gameboard() {
                                         else if (oks == 7) setX8("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -355,7 +355,7 @@ function Gameboard() {
                                         else if (oks == 6) setX7("o");
                                         else if (oks == 8) setX9("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -379,7 +379,7 @@ function Gameboard() {
                                         else if (oks == 6) setX7("o");
                                         else if (oks == 7) setX8("o");
                                         checkWin();
-                                        console.log(board);
+                                        //console.log(board);
                                     }
                                 }
                             }
@@ -387,7 +387,21 @@ function Gameboard() {
                     </div>
                 </div>
             </div>
-            <div className={"test center"}>results:</div>
+            <div onClick={()=>{
+                board = ["", "", "", "", "", "", "", "", ""];
+                won = 0;
+                moves = 0;
+                setX1("");
+                setX2("");
+                setX3("");
+                setX4("");
+                setX5("");
+                setX6("");
+                setX7("");
+                setX8("");
+                setX9("");
+                handleClick();
+            }} className={"button"}>Restart</div>
         </div>
     );
 }
